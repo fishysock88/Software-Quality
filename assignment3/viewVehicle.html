@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Assignment 3</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body onload="fill()">
+        <ul>
+            <li><a href="index.html">Sell your Vehicle Now!</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="list.html">List of Entered Vehicles</a></li>
+        </ul>
+        <!--form for adding seller and vehicle information
+        here, I used the required tag for all of the fields so that
+        the user cannot submit the form unless all fields are filled,
+        and for the postal code and phone number fields, I used
+        the pattern tag followed by a Regular Expression that matches
+        the required postal code and phone number layouts.-->
+        <form>
+            <h1>Vehicle Information</h1>
+
+            <h2>Seller's Information</h2>
+            <label for="fName">First Name</label>
+            <input type="text" name="fName" id="fName" readonly>
+
+            <label for="lName">Last Name</label>
+            <input type="text" name="lName" id="lName" readonly>
+
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" readonly>
+
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" readonly>
+
+            <label for="province">Province</label>
+            <select id="province" name="province" readonly>
+                <option value="Ontario">Ontario</option>
+                <option value="Quebec">Quebec</option>
+            </select>
+
+            <label for="pCode">Postal Code</label>
+            <input type="text" name="pCode" id="pCode" readonly pattern="[A-Z]\d[A-Z]\s\d[A-Z]\d" title="Ex. N0B 1S0">
+
+            <label for="pNum">Phone Number</label>
+            <input type="text" name="pNum" id="pNum" readonly pattern="\d\d\d-\d\d\d-\d\d\d\d|\(\d\d\d\)\d\d\d-\d\d\d\d">
+
+            <label for="email">Email Address</label>
+            <input type="text" name="email" id="email" readonly>
+
+            <h2>Vehicle's Information</h2>
+
+            <label for="make">Make</label>
+            <input type="text" name="make" id="make" readonly>
+
+            <label for="model">Model</label>
+            <input type="text" name="model" id="model" readonly>
+
+            <label for="year">Year</label>
+            <input type="text" name="year" id="year" readonly>
+
+            <label for="link">JD Power and Associates page</label>
+            <input type="text" name="link" id="link" readonly>
+            
+        </form>
+        <button onclick="submit()" type="button">Storage</button>
+    </body>
+</html>
