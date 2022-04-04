@@ -1,3 +1,5 @@
+/* changing style for menu bar so it is actually usable */
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -22,7 +24,7 @@ ul {
   li a:hover {
     background-color: #111;
   }
-
+/* changing button style */
   button {
       background-color: rgb(133, 133, 133);
       padding: 20px;
@@ -30,7 +32,7 @@ ul {
       margin: auto;
       margin-top: 2em;
   }
-
+/* adding border and centering divs for list page */
   div {
     border-style: double;
     width: 500px;
@@ -38,7 +40,7 @@ ul {
     margin: auto;
     margin-top: 2em;
   }
-
+/* removing border for main div to avoid weirdness */
   #list {
     border-style: none;
   }
